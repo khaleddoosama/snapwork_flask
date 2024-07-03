@@ -19,6 +19,7 @@ ITEMS_PER_PAGE = 10
 
 @app.route('/search', methods=['POST'])
 def search():
+    
     # Get query and pagination parameters
     query = request.json.get('query')
     page = request.args.get('page', default=1, type=int)
